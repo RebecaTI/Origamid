@@ -1,29 +1,38 @@
-const imgs = document.querySelectorAll('img');
+const menu = document.querySelector('.menu');
 
-imgs.forEach(function(item, index, array){
-    // console.log(item, index, array)
-});
+menu.classList.add('ativo');
+menu.classList.remove('azul');
+// menu.classList.toggle('azul');
 
-const titulos = document.getElementsByClassName('titulo');
-const titulosArray = Array.from(titulos);
 
-// console.log(titulos);
-// console.log(titulosArray);
+if(menu.classList.contains('azul')) {
+  menu.classList.add('possui-azul');
+} else {
+  menu.classList.add('nao-possui-azul');
+}
 
-titulosArray.forEach(function(item, index, array) {
-    // console.log(item, index, array);
-})
+menu.className += ' vermelho';
 
-let i = 0;
-// imgs.forEach(item => {
-//     console.log(item);
-// })
+console.log(menu.className);
 
-// imgs.forEach((item, index) => {
-//     console.log(i++);
-// })
+const animais = document.querySelector('.animais');
 
-// imgs.forEach((item) => console.log(i++));
+console.log(animais.attributes['data-texto']);
 
-imgs.forEach(() => console.log(i++));
+const img = document.querySelector('img');
+
+const srcImg = img.getAttribute('src');
+
+img.setAttribute('alt', 'É uma raposa');
+const possuiAlt = img.hasAttribute('alt');
+console.log(possuiAlt);
+
+console.log(srcImg);
+
+const carro = {
+  portas: 4,
+  andar: function(km) {
+    console.log(`Andou ${km}`);
+  }
+}
 
