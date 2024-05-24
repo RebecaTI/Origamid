@@ -1,0 +1,14 @@
+elas têm diferenças importantes:
+
+clientHeight:
+
+clientHeight retorna a altura do conteúdo de um elemento, incluindo preenchimento interno (padding), mas excluindo a borda (border), a barra de rolagem (scrollbar) e a margem (margin). Em outras palavras, clientHeight representa a altura da área de conteúdo visível de um elemento.
+Essa propriedade é útil para calcular a altura real do conteúdo visível de um elemento em relação ao layout da página.
+offsetHeight:
+
+offsetHeight retorna a altura total de um elemento, incluindo a altura do conteúdo, preenchimento interno (padding), borda (border) e, opcionalmente, a barra de rolagem (scrollbar) vertical, se houver, mas excluindo a margem (margin) externa.
+Essa propriedade é útil para determinar o espaço total ocupado pelo elemento na página, incluindo todas as suas dimensões visíveis e eventuais rolagens.
+Portanto, resumindo:
+
+clientHeight representa a altura da área de conteúdo visível de um elemento, excluindo margens, bordas e barras de rolagem.
+offsetHeight representa a altura total de um elemento, incluindo todas as dimensões visíveis, mas excluindo margens.
