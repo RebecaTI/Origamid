@@ -3,6 +3,10 @@ body, h1, h2, ul, li, p, dd, dt, dl {
   padding: 0px;
 }
 
+.azul {
+  background: teal;
+}
+
 img {
   display: block;
   max-width: 100%;

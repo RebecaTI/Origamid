@@ -3,39 +3,44 @@
 
 let firstImage = document.querySelector('img');
 const firstImageTop = firstImage.offsetTop;
-console.log(firstImage.clientHeight);
+
 console.log(firstImageTop);
 
 // Retorne a soma da largura de todas as imagens
 
-// let allImages = document.querySelectorAll('img');
+function somaImagens() {
+    const allImages = document.querySelectorAll('img');
+    let soma = 0;
+    allImages.forEach((imagem) => {
+        soma += imagem.offsetWidth; 
+    });
+    console.log(soma);
 
-// allImagesArray = Array.from(allImages);
-
-// allImagesArray.forEach((item) => {
-    
-//     console.log(item.clientWidth)
+}
+// allImages.forEach((imagem) => {
+//     console.log(imagem.offsetWidth);
 // });
+
+window.onload = function () {
+    somaImagens()
+}
 
 // Verifique se os links da página possuem
 // o mínimo recomendado para telas utilizadas
 // com o dedo. (48px/48px de acordo com o google)
 
-// let allLinks = document.querySelectorAll('a[href]');
+let links = document.querySelectorAll('a[href]');
 
-// allLinksArray = Array.from(allLinks);
 
-// allLinksArray.forEach((item) =>{
-//     const rectAllLinksArray = item.getBoundingClientRect();
-
-//     if(rectAllLinksArray.height > 48) {
-//         console.log('Possui o tamanha recomentado ') 
-//         }else {
-//             console.log('Não possui o tamanho adequado 48')
-//     }
-
-//     console.log(rectAllLinksArray.height);
-// })
+links.forEach((link) =>{
+    const linkWidth = link.offsetWidth;
+    const linkHeight = link.offsetHeight;
+    if(linkWidth >= 48 && linkHeight >= 48) {
+        console.log(link , 'Possui boa acessibilidade.')
+    } else {
+        console.log(link, 'Não possui boa acessibilidade.')
+    }
+})
 
 // Se o browser for menor que 720px,
 // adicione a classe menu-mobile ao menum
