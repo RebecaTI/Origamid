@@ -3,7 +3,6 @@ body, h1, h2, ul, li, p, dd, dt, dl {
   padding: 0px;
 }
 
-
 img {
   display: block;
   max-width: 100%;
@@ -36,7 +35,7 @@ body {
 
 .menu li a {
   display: block;
-  padding: 20px 15px;
+  padding: 10px;
   margin-right: 10px;
   color: #222;
   text-decoration: none;
@@ -97,12 +96,8 @@ body {
   grid-column: 2;
 }
 
-.animais-lista li{
-  cursor:pointer;
-}
-
-.animais-lista li:hover{
-  border:#FB5 solid 5px;
+.animais-lista li {
+  cursor: pointer;
 }
 
 .animais-lista::-webkit-scrollbar {
@@ -220,17 +215,15 @@ body {
   display: none;
 }
 
-.js-tabcontent section.ativo{
-  display:block !important;
+.js-tabcontent section.ativo {
+  display: block !important;
   animation: show .5s forwards;
-  }
-  
-  @keyframes show {
-    from {
-      opacity: 0;
-      transform: translate3d(-30px, 0,0);
-      /* Eixo X, Y e Z */
-      /* -30px p Esquerda */
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
   }
   to {
     opacity: 1;
