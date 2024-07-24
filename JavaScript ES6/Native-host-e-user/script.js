@@ -1,7 +1,7 @@
 console.log(typeof Array.fromdfdfdfd  !== 'undefined')
 
 if(typeof Array.fromsdgffdsa  !== 'undefined'){
-  console.log('não existe')
+  console.log('Existe')
 } else {
-  console.log('Existe');
+  console.log('Não existe');
 }
