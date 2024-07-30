@@ -60,7 +60,8 @@ Math.floor(Math.random() * (72 - 32 + 1)) + 32;
 // Math.floor(Math.random() * (max - min + 1)) + min;
 
 // Vamos supor temos um personagem de um jogo. 
-//O assassino tem o dano minimo de 200 por hit
+//O guarda deve ser morto por um ataque armado, o o homem proximo a ele deve ser sequestrado. Usando um ataque Desarmado pra apagar a vitima
+//A assassina tem laminas de 100 de dano
 //o anel adiciona 50 de dano
 //o colar adiciona 80 de dano
 //Habilidade corporal é de 50
