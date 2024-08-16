@@ -1,9 +1,9 @@
-const div = document.querySelector('[data-cor]');
+// const div = document.querySelector('[data-cor]');
 
-div.dataset.height = 1000;
+// div.dataset.height = 1000;
 
-delete div.dataset.height
+// delete div.dataset.height
 
-div.dataset.totalHeight = 2000;
+// div.dataset.totalHeight = 2000;
 
-console.log(div.dataset)
+// console.log(div.dataset)
