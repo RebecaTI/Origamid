@@ -34,10 +34,11 @@ input {
   color: #333;
   margin-top: 40px;
   display: flex;
-  font-display: column;
+  flex-direction: column;
 }
 
 .css span {
   display: block;
+  color: red;
   margin-bottom: .5rem;
 }

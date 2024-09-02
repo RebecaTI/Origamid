@@ -11,6 +11,27 @@ const handleStyle = {
   height(value) {
     this.element.style.height = value + 'px';
   },
+  width(value) {
+    this.element.style.width = value + 'px';
+  },
+  texto(value) {
+    this.element.innerText = value;
+  },
+  color(value) {
+    this.element.style.color = value;
+  },
+  border(value) {
+    this.element.style.border = value;
+  },
+  borderRadius(value) {
+    this.element.style.borderRadius = value + 'px';
+  },
+  fontFamily(value) {
+    this.element.style.fontFamily = value;
+  },
+  fontSize(value) {
+    this.element.style.fontSize = value + 'rem';
+  },
 }
 
 function handleChange(event) {
@@ -19,4 +40,10 @@ function handleChange(event) {
 
   // handleStyle.height(2)  
   handleStyle[name](value);  //Isso é o mesmo que o de cima
+  showCss();
+}
+
+function showCss() {
+  cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>');
+  console.log(btn.style.cssText.split('; ').join('; </span><span>'));
 }
