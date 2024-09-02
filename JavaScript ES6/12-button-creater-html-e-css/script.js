@@ -40,8 +40,19 @@ function handleChange(event) {
 
   // handleStyle.height(2)  
   handleStyle[name](value);  //Isso é o mesmo que o de cima
+  saveValues(name, value);
   showCss();
 }
+function saveValues(name, value) {
+  localStorage[name] = value;
+}
+function setValues() {
+  const properties = Object.keys(localStorage);
+  properties.forEach(propertie => {
+    controles.elements[propertie].value = localStorage[propertie];
+  });
+}
+setValues();
 
 function showCss() {
   cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>');
