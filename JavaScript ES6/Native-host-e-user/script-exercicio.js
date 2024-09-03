@@ -1,39 +1,23 @@
-// Crie uma função construtora de Pessoas
-// Deve conter nome, sobrenome e idade
-// Crie um método no protótipo que retorne
-// o nome completo da pessoa
+// Liste 5 objetos nativos
+Object
+String
+Array
+Function
+Number
 
-function Pessoa(nome, sobrenome , idade){
-  this.nome = nome;
-  this.sobrenome = sobrenome;
-  this.idade = idade;
+// Liste 5 objetos do browser
+Window
+history
+Document
+HTMLCollection
+NodeList
+
+// Liste 2 Métodos, Propriedades ou Objetos
+// presentes no Chrome que não existem no Firefox
+
+if(typeof document.webkitHidden
+    !== "undefined"){
+  console.log('existe')
+} else {
+  console.log('não existe')
 }
-
-Pessoa.prototype.nomeCompleto = function() {
-  return `${this.nome} ${this.sobrenome}`;
-}
-
-const carina = new Pessoa('Carina', 'Oliveira', 54);
-
-// Liste os métodos acessados por 
-// dados criados com NodeList,
-// HTMLCollection, Document
-
-Object.getOwnPropertyNames(NodeList)
-Object.getOwnPropertyNames(HTMLCollection)
-Object.getOwnPropertyNames(Document)
-
-// Liste os construtores dos dados abaixo
-const li = document.querySelector('li');
-
-li; //HTMLLIElement
-li.click; //Function
-li.innerText; //String
-li.value; //Number
-li.hidden; //Boolean
-li.offsetLeft; //Number
-li.click();  //undefined
-
-// Qual o construtor do dado abaixo:
-li.hidden.constructor.name; //String
-//Estou querendo saber o topo de dado
