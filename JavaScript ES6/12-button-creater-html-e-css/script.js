@@ -49,8 +49,10 @@ function saveValues(name, value) {
 function setValues() {
   const properties = Object.keys(localStorage);
   properties.forEach(propertie => {
+    handleStyle[propertie](localStorage[propertie]);
     controles.elements[propertie].value = localStorage[propertie];
   });
+  showCss();
 }
 setValues();
 
