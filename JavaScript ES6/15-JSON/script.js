@@ -13,4 +13,4 @@ const configuracoes = {
 localStorage.config = JSON.stringify(configuracoes);
 
 // const stringConfig = JSON.stringify(configuracoes);
-console.log(JSON.parse(localStorage.config))
+console.log(JSON.parse(localStorage.config));
