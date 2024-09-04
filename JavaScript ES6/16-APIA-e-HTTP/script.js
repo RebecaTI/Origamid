@@ -6,8 +6,19 @@
 const url = 'https://jsonplaceholder.typicode.com/users/1/posts';
 const options = {
   method: 'POST',
-  body: '{}'
+  body: '{"title": "Javascript"}',
+  headers: {
+    "Content-Type": "application/json; charset=utf-8"
+  }
 }
 //Dentro do body é do tipo JSON
 
-fetch(url, options);
+fetch(url, options)
+  .then(response => response.json())
+  .then(json => console.log(json))
+
+  //Methods
+  //GET 
+  //POST 
+  //PUT
+  //DELETE
