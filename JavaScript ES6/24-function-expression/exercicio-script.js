@@ -14,5 +14,5 @@ console.log(priceNumber('R$ 99,99'));
 // a função abaixo.
 const active = callback => callback();
 active(() => {
-  console.log('Teste')
+  console.log('Teste');
 })
