@@ -52,8 +52,14 @@
 
 
 // Declarando varias variaveis com nomes parecidos
-const primeiro = 'Item 1';
-const segundo = 'Item 2';
-const terceira = 'Item 3';
+// const primeiro = 'Item 1';
+// const segundo = 'Item 2';
+// const terceira = 'Item 3';
 
-const [primeiroO, segundoO, terceiraO] = ['Item 1', 'Item 2', 'Item 3'];
+// const [primeiroO, segundoO, terceiraO] = ['Item 1', 'Item 2', 'Item 3'];
+
+function handleKeyboard({ key, keyCode }) {
+  console.log(key, keyCode);
+}
+
+document.addEventListener('keyup', handleKeyboard);
