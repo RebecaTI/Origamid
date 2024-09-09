@@ -48,7 +48,7 @@ function $$(selectedElements) {
 }
 const btns = $$('button');
 
-btns.addClass('ativar')
+btns.addClass('ativar');
 
 // console.log(btns.hide().show());
 
