@@ -45,7 +45,7 @@ Object.defineProperties(carro, {
 })
 
 for (const f in frutas) {
-  console.log(frutas[f])
+  // console.log(frutas[f])
 }
 
 
@@ -53,5 +53,12 @@ const btnUnico = document.querySelector('button');
 const btnStyles = getComputedStyle(btnUnico);
 
 for (const style in btnStyles) {
-  console.log(`${style}: ${btnStyles[style]}`);
+  // console.log(`${style}: ${btnStyles[style]}`);
 }
+
+
+
+let i = 0;
+do {
+  console.log(i++);
+} while (i <= 20);
