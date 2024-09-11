@@ -27,7 +27,7 @@
 
 function anunciarGanhadores(premio, ...ganhadores) {
   ganhadores.forEach(ganhador => {
-    console.log(ganhador + ' ganhou um ' + premio);
+    // console.log(ganhador + ' ganhou um ' + premio);
   })
 }
 const ganhadores = ['Pedro', 'Marta', 'Maria', 'Beto'];
@@ -44,5 +44,16 @@ anunciarGanhadores('Carro', ...ganhadores);
 
 
 
+const todosOsNumeros = [3, 4, 5, 6, 12, 34, 5, 6, 5, 3];
+const numeroMaximo = Math.max(...todosOsNumeros);
 
-const numeroM
+// console.log(numeroMaximo);
+
+const btns = document.querySelectorAll('button');
+console.log(btns)
+
+const btnArray = Array.from(btns)
+const btnArray2 = [...btns];
+
+console.log(btnArray)
+console.log(btnArray2)
