@@ -1,4 +1,4 @@
-const cpfs = document.querySelectorAll('.cpf li');
+const cpfsList = document.querySelectorAll('.cpf li');
 
 const elementsInnerText = ([...elements]) => {
   return elements.map(elements => elements.innerText);
@@ -12,12 +12,20 @@ const construirCPF = (cpf) => {
   return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, '$1.$2.$3-$4');
 }
 
+//Essa se chama uma Function Expression
 const formatarCPFS = (cpfs) => {
-  return cpfs.map(cpf => {
-    return limparCPF(cpf);
-  })
+  return cpfs.map(limparCPF).map(construirCPF);
 }
 
-const resultado = elementsInnerText(cpfs);
+const substituirCPFS = (cpfsElements) => {
+  const cpfs = elementsInnerText(cpfsElements);
+  const cpfsFormatados = formatarCPFS(cpfs);
 
-console.log(formatarCPFS(resultado))
+  cpfsElements.forEach((elements, index) => {
+    elements.innerText = cpfsFormatados[index];
+  })
+
+  console.log(cpfsFormatados);
+}
+
+substituirCPFS(cpfsList);
