@@ -9,7 +9,8 @@ import { createRoot } from 'react-dom/client'
 // import App7 from './App7.jsx';
 // import App8Ex from './App8Ex.jsx';
 // import App9 from './App9.jsx';
-import App10 from './App10.jsx';
+// import App10 from './App10.jsx';
+import App11ExFetch from './App11ExFetch.jsx'
 
 
 // createRoot(document.getElementById('root')).render(<App />)
@@ -21,4 +22,12 @@ import App10 from './App10.jsx';
 // createRoot(document.getElementById('root-propriedades')).render(<App7 />);
 // createRoot(document.getElementById('root-exercicio-3')).render(<App8Ex />);
 // createRoot(document.getElementById('root-Hooks-useState-1')).render(<App9 />);
-createRoot(document.getElementById('root-contador')).render(<App10 />)
+// createRoot(document.getElementById('root-contador')).render(<App10 />)
+// createRoot(document.getElementById('root-exercicio-4-Fetch')).render(<App11ExFetch />)
+const rootElement = document.getElementById('root-exercicio-4-Fetch');
+const root = createRoot(rootElement);  // Cria o root
+root.render(
+  <StrictMode>
+    <App11ExFetch />
+  </StrictMode>
+);
