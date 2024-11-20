@@ -10,7 +10,8 @@ import { createRoot } from 'react-dom/client'
 // import App8Ex from './App8Ex.jsx';
 // import App9 from './App9.jsx';
 // import App10 from './App10.jsx';
-import App11ExFetch from './App11ExFetch.jsx'
+// import App11ExFetch from './App11ExFetch.jsx';
+import App12useEffect from './App12useEffect';
 
 
 // createRoot(document.getElementById('root')).render(<App />)
@@ -25,9 +26,20 @@ import App11ExFetch from './App11ExFetch.jsx'
 // createRoot(document.getElementById('root-contador')).render(<App10 />)
 // createRoot(document.getElementById('root-exercicio-4-Fetch')).render(<App11ExFetch />)
 const rootElement = document.getElementById('root-exercicio-4-Fetch');
-const root = createRoot(rootElement);  // Cria o root
-root.render(
+const rootElementEffect = document.getElementById('root-useEffect');
+
+//Criando os roots
+const root = createRoot(rootElement);
+const rootEffect = createRoot(rootElementEffect);
+
+//Renderizando os componentes nos respectivos roots
+// root.render(
+//   <StrictMode>
+//     <App11ExFetch />
+//   </StrictMode>
+// );
+rootEffect.render(
   <StrictMode>
-    <App11ExFetch />
+    <App12useEffect />
   </StrictMode>
-);
+)
