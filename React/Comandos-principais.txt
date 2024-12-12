@@ -1,0 +1,5 @@
+npm run dev
+Pra criar o ambiente de desenvolvimento
+
+npm run build
+Que vai gerar os arquivos finais que vai subir no servidor
