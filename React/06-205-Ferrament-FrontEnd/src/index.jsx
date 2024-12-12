@@ -12,8 +12,9 @@ import { createRoot } from 'react-dom/client'
 // import App10 from './App10.jsx';
 // import App11ExFetch from './App11ExFetch.jsx';
 // import App12useEffect from './App12useEffect';
-import App13ExLocalStorage from './App13ExLocalStorage.jsx'
-
+// import App13ExLocalStorage from './App13ExLocalStorage.jsx'
+// import App14useRef from './App14useRef.jsx';
+import App15useMemo from './App15useMemo.jsx'
 
 // createRoot(document.getElementById('root')).render(<App />)
 // createRoot(document.getElementById('root-exercicio')).render(<App2 />);
@@ -29,11 +30,15 @@ import App13ExLocalStorage from './App13ExLocalStorage.jsx'
 const rootElement = document.getElementById('root-exercicio-4-Fetch');
 const rootElementEffect = document.getElementById('root-useEffect');
 const rootElementEffectEx = document.getElementById('root-exercicio-5-Fetch');
+const rootElementuseRef = document.getElementById('root-useRef');
+const rootElementuseMemo = document.getElementById('root-useMemo');
 
 //Criando os roots
 const root = createRoot(rootElement);
 const rootEffect = createRoot(rootElementEffect);
 const rootEffectEx = createRoot(rootElementEffectEx);
+const rootuseRef = createRoot(rootElementuseRef);
+const rootuseMemo = createRoot(rootElementuseMemo);
 
 //Renderizando os componentes nos respectivos roots
 // root.render(
@@ -46,8 +51,18 @@ const rootEffectEx = createRoot(rootElementEffectEx);
 //     <App12useEffect />
 //   </StrictMode>
 // )
-rootEffectEx.render(
+// rootEffectEx.render(
+//   <StrictMode>
+//     <App13ExLocalStorage />
+//   </StrictMode>
+// )
+// rootuseRef.render(
+//   <StrictMode>
+//     <App14useRef />
+//   </StrictMode>
+// )
+rootuseMemo.render(
   <StrictMode>
-    <App13ExLocalStorage />
+    <App15useMemo />
   </StrictMode>
 )

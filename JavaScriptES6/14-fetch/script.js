@@ -1,8 +1,6 @@
 // fetch interna
 //API Significa que é uma intervace de aplicação que conseguimos interagir com ela atravez de codigos.
 
-
-
 // const doc = fetch('./doc.txt');
 // doc
 //   .then(r => r.text())
@@ -10,8 +8,6 @@
 //     const conteudo = document.querySelector('.conteudo');
 //     conteudo.innerText = body;
 //   });
-
-
 
 // const style = fetch('./style.css');
 // style
@@ -24,8 +20,6 @@
 //     conteudo.appendChild(style);
 //   });
 
-
-
 // const sobre = fetch('./sobre.html');
 // const div = document.createElement('div');
 // sobre
@@ -37,8 +31,6 @@
 //     console.log(titulo);
 //   });
 
-
-
 // const imagem = fetch("./imagem.jpg");
 // imagem
 //   .then(r => r.blob())
@@ -48,8 +40,6 @@
 //     console.log(imagemDom)
 //     imagemDom.src = blobUrl;
 //   });
-
-
 
 // const cep = fetch("https://viacep.com.br/ws/01001000/json/");
 // cep
@@ -67,12 +57,10 @@
 //     console.log(body)
 //   });
 
-
-
-const imagem = fetch('https://www.google.com');
-imagem.then(response => {
-  console.log(response.type);
+const imagem = fetch('https://www.google.com')
+imagem.then((response) => {
+  console.log(response.type)
   if (response.status === 404) {
-    console.log('Página não existe');
+    console.log('Página não existe')
   }
-});
+})

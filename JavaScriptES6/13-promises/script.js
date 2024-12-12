@@ -33,9 +33,9 @@ const dados = new Promise((resolve) => {
   }, 1500)
 })
 
-const carregouTudo = Promise.race([login, dados]);
+const carregouTudo = Promise.race([login, dados])
 
 carregouTudo.then((resolucao) => {
-  console.log(resolucao);
+  console.log(resolucao)
 })
 // //JavaScript assincrono
