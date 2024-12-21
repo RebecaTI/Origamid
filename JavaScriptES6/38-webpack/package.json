@@ -1,7 +1,6 @@
 {
   "name": "animais-eslint",
   "version": "1.0.0",
-  "description": "",
   "main": "index.html",
   "scripts": {
     "build": "webpack --mode production js/script.js -o ./main.js",
@@ -19,5 +18,6 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "lodash": "^4.17.10"
-  }
+  },
+  "description": ""
 }
