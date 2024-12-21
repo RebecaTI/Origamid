@@ -1,5 +1,8 @@
 npm run dev
 Pra criar o ambiente de desenvolvimento
 
+rafc
+Forma mais rapida p ja iniciar, muito parecido com html:5 em q ja coloca os codigos iniciais automaticamente 
+
 npm run build
 Que vai gerar os arquivos finais que vai subir no servidor
