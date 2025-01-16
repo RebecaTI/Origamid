@@ -1,8 +1,23 @@
 "use strict";
-let produto = 'Livro';
-let preco = 200;
-const carro = {
-    marca: 'Audi',
-    portas: 5,
-};
-preco = '300';
+const input = document.querySelector('input');
+const total = localStorage.getItem('total');
+if (input && total) {
+    input.value = total;
+    calcularGanho(Number(input.value));
+}
+function calcularGanho(value) {
+    const p = document.querySelector('p');
+    if (p) {
+        p.innerText = `Ganho total: ${value + 100 - value * 0.2}`;
+    }
+}
+function totalMudou() {
+    if (input) {
+        const value = Number(input.value);
+        localStorage.setItem('total', input.value);
+        calcularGanho(value);
+    }
+}
+if (input) {
+    input.addEventListener('keyup', totalMudou);
+}

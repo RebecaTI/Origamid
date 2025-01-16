@@ -1,18 +1,26 @@
-let produto: string = 'Livro'
-let preco: number = 200
+const input = document.querySelector('input')
 
-const carro: {
-  marca: string
-  portas: number
-} = {
-  marca: 'Audi',
-  portas: 5
+const total = localStorage.getItem('total')
+if (input && total) {
+  input.value = total
+  calcularGanho(Number(input.value))
 }
 
-const barato: boolean | string = preco < 400 ? true : 'produto caro'
-
-function somar(a: number, b: number) {
-  return a + b
+function calcularGanho(value: number) {
+  const p = document.querySelector('p')
+  if (p) {
+    p.innerText = `Ganho total: ${value + 100 - value * 0.2}`
+  }
 }
 
-somar(4, 10)
+function totalMudou() {
+  if (input) {
+    const value = Number(input.value)
+    localStorage.setItem('total', input.value)
+    calcularGanho(value)
+  }
+}
+
+if (input) {
+  input.addEventListener('keyup', totalMudou)
+}
