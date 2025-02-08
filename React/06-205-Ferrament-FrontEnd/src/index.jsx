@@ -1,5 +1,7 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 // import App from './App.jsx';
 // import App2 from './App2.jsx';
 // import App3 from './App3.jsx';
@@ -14,7 +16,11 @@ import { createRoot } from 'react-dom/client'
 // import App12useEffect from './App12useEffect';
 // import App13ExLocalStorage from './App13ExLocalStorage.jsx'
 // import App14useRef from './App14useRef.jsx';
-import App15useMemo from './App15useMemo.jsx'
+// import App15useMemo from './App15useMemo.jsx'
+// import App16createContext from './App16createContext.jsx';
+import App1useContext2Ex from './exercicios/App1userContext2Ex';
+import App17CustomHooks1 from './App17CustomHooks1';
+import App18CustomHooks2 from './App18CustomHooks2'
 
 // createRoot(document.getElementById('root')).render(<App />)
 // createRoot(document.getElementById('root-exercicio')).render(<App2 />);
@@ -32,6 +38,10 @@ const rootElementEffect = document.getElementById('root-useEffect');
 const rootElementEffectEx = document.getElementById('root-exercicio-5-Fetch');
 const rootElementuseRef = document.getElementById('root-useRef');
 const rootElementuseMemo = document.getElementById('root-useMemo');
+const rootElementcreateContext = document.getElementById('root-createContext');
+const rootexerciciousElementContext = document.getElementById('root-exercicio-useContext');
+const rootElementCustomHooks1 = document.getElementById('root-CustomHooks1');
+const rootElementCustomHooks2 = document.getElementById('root-CustomHooks2');
 
 //Criando os roots
 const root = createRoot(rootElement);
@@ -39,6 +49,9 @@ const rootEffect = createRoot(rootElementEffect);
 const rootEffectEx = createRoot(rootElementEffectEx);
 const rootuseRef = createRoot(rootElementuseRef);
 const rootuseMemo = createRoot(rootElementuseMemo);
+const rootcreateContext = createRoot(rootElementcreateContext)
+const rootexerciciousContext = createRoot(rootexerciciousElementContext);
+const rootCustomHooks1 = createRoot(rootElementCustomHooks1);
 
 //Renderizando os componentes nos respectivos roots
 // root.render(
@@ -61,8 +74,30 @@ const rootuseMemo = createRoot(rootElementuseMemo);
 //     <App14useRef />
 //   </StrictMode>
 // )
-rootuseMemo.render(
-  <StrictMode>
-    <App15useMemo />
-  </StrictMode>
+
+// rootuseMemo.render(
+//   <StrictMode>
+//     <App15useMemo />
+//   </StrictMode>
+// )
+
+// rootuseMemo.render(
+//   <App15useMemo />,
+//   document.getElementById('root-useMemo'),
+// );
+
+// rootcreateContext.render(
+//   <App16createContext />
+// )
+
+// rootexerciciousContext.render(
+//   <App1useContext2Ex />
+// )
+
+// rootCustomHooks1.render(
+//   <App17CustomHooks1 />
+// )
+
+rootCustomHooks1.render(
+  <App18CustomHooks2 />
 )

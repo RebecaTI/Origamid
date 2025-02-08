@@ -1,12 +1,26 @@
-let produto = 'Livro';
-let preco: number = 200;
+const input = document.querySelector('input')
 
-const carro: {
-  marca: string;
-  portas: number;
-} = {
-  marca: 'Audi',
-  portas: 5,
+const total = localStorage.getItem('total')
+if (input && total) {
+  input.value = total
+  calcularGanho(Number(input.value))
 }
 
-carro.marca = 3;
+function calcularGanho(value: number) {
+  const p = document.querySelector('p')
+  if (p) {
+    p.innerText = `Ganho total: ${value + 100 - value * 0.2}`
+  }
+}
+
+function totalMudou() {
+  if (input) {
+    const value = Number(input.value)
+    localStorage.setItem('total', input.value)
+    calcularGanho(value)
+  }
+}
+
+if (input) {
+  input.addEventListener('keyup', totalMudou)
+}
