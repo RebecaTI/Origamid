@@ -1,36 +1,35 @@
 import React from 'react';
-
-const titulo = <h1>Esse é um titulo</h1>
+import Produto from './Produto';
 
 const App = () => {
-  const random = Math.random();
-  const ativo = true;
+  const [dados, setDados] = React.useState(null);
+  const [carregando, setCarregando] = React.useState(null);
 
-  function mostrarNome(sobrenome) {
-    return 'Thiago' + sobrenome;
-  }
-
-  const carro = {
-    marca: 'Ford',
-    rodas: '4',
-  }
-
-  const estiloP = {
-    color: 'blue',
-    fontSize: '2rem',
+  async function handleClick(event) {
+    setCarregando(true);
+    const response = await fetch(
+      `https://ranekapi.origamid.dev/json/api/produto/${event.target.innerText}`,
+    );
+    const json = await response.json();
+    setDados(json);
+    setCarregando(false);
   }
 
   return (
-    <>
-      {titulo}
-      <p>
-        {false ? 'ddfdfdf' : '52555'} - {10}
-        {mostrarNome(' Oliveira')}
-      </p>
-      <p style={estiloP}>{new Date().getFullYear()}</p>
-      <p className={ativo ? 'ativo' : 'inativo'}>{(random * 1000) / 50}</p>
-    </>
+    <div>
+      <button style={{ margin: '.5rem' }} onClick={handleClick}>
+        notebook
+      </button>
+      <button style={{ margin: '.5rem' }} onClick={handleClick}>
+        smartphone
+      </button>
+      <button style={{ margin: '.5rem' }} onClick={handleClick}>
+        tablet
+      </button>
+      {carregando && <p>Carregando...</p>}
+      {!carregando && dados && <Produto dados={dados} />}
+    </div>
   );
 };
 
-export default App
+export default App;
